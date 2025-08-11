@@ -2,26 +2,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
 
 :root {
-    --dourado: #C49E49;
-    --roxo-escuro: #3B1F4E;
-    --roxo-claro: #7E5BA8;
-    --preto-fundo: #1A1A1A;
-    --cinza-claro: #DDD6F3;
+    --marrom-couro: #7B4F24;
+    --verde-musgo: #4A5A2A;
+    --bege-areia: #D9C9B6;
+    --marrom-madeira: #4B2E11;
+    --azul-ceu: #7A9CC6;
+
+    --fundo-escuro: #3E2F1C; /* um marrom escuro para o fundo */
+    --texto-claro: #F2E9DB; /* bege clarinho para texto */
 }
 
 body {
     font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
-    background-color: var(--preto-fundo);
-    color: var(--cinza-claro);
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
+    background-color: var(--fundo-escuro);
+    color: var(--texto-claro);
 }
 
 header {
-    background-color: #000000cc; /* Preto com transparência */
-    border-bottom: 2px solid var(--dourado);
+    background-color: #000000cc; /* pode deixar transparente ou substituir por um marrom escuro */
+    border-bottom: 2px solid var(--marrom-couro);
 }
 
 section {
@@ -29,20 +29,18 @@ section {
 }
 
 .nav-link {
-    color: var(--dourado);
+    color: var(--marrom-couro);
     font-weight: 600;
     transition: color 0.3s ease;
-    text-decoration: none;
 }
 
-.nav-link:hover,
-.nav-link:focus {
-    color: var(--roxo-claro);
+.nav-link:hover, .nav-link:focus {
+    color: var(--verde-musgo);
     text-decoration: underline;
 }
 
 .inicio-fundo {
-    background-image: url('img/fundo-noite-lua.jpg'); /* lua cheia */
+    background-image: url('img/fundo-noite-lua.jpg'); /* você pode trocar por uma imagem de campo ou cavalo */
     background-size: cover;
     background-position: center;
     border-radius: 80px;
@@ -51,8 +49,7 @@ section {
     padding: 40px;
     margin: 0 auto;
     position: relative;
-    box-shadow: 0 0 20px var(--dourado);
-    overflow: hidden;
+    box-shadow: 0 0 20px var(--marrom-couro);
 }
 
 .img-inicio {
@@ -62,13 +59,7 @@ section {
     max-width: 40rem;
     width: 100%;
     height: auto;
-    filter: drop-shadow(0 0 10px var(--roxo-escuro));
-    transition: filter 0.3s ease;
-}
-
-.img-inicio:hover,
-.img-inicio:focus {
-    filter: drop-shadow(0 0 15px var(--dourado));
+    filter: drop-shadow(0 0 10px var(--verde-musgo));
 }
 
 .esquerda-conteudo {
@@ -76,34 +67,27 @@ section {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
-    max-width: 600px;
-    z-index: 2; /* Garante estar acima da imagem */
 }
 
 .botao-inicio {
-    background-color: var(--dourado);
+    background-color: var(--marrom-couro);
     border-radius: 30px;
     border: none;
     width: 14em;
     height: 3em;
     font-weight: 700;
-    color: var(--preto-fundo);
+    color: var(--bege-areia);
     transition: background-color 0.3s ease;
-    cursor: pointer;
 }
 
-.botao-inicio:hover,
-.botao-inicio:focus {
-    background-color: var(--roxo-claro);
-    color: var(--cinza-claro);
-    outline: none;
+.botao-inicio:hover, .botao-inicio:focus {
+    background-color: var(--verde-musgo);
+    color: var(--texto-claro);
 }
 
 .display-4 {
-    text-shadow: -5px 5px var(--dourado);
+    text-shadow: -5px 5px var(--marrom-couro);
     font-family: 'Lemon', cursive;
-    font-size: 3.5rem;
-    margin: 0;
 }
 
 #historia {
@@ -120,26 +104,23 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
     position: relative;
     z-index: 1;
-    flex-wrap: wrap;
 }
 
 h2 {
     font-family: 'Lemon', serif;
     font-size: 2.5em;
     font-style: normal;
-    color: var(--dourado);
-    text-shadow: 1px 1px 3px var(--roxo-escuro);
-    margin-bottom: 1rem;
+    color: var(--marrom-couro);
+    text-shadow: 1px 1px 3px var(--verde-musgo);
 }
 
 #galeria {
-    background-color: #2a1a4a; /* roxo bem escuro */
+    background-color: var(--verde-musgo);
     padding: 3rem 0;
     border-radius: 30px;
-    box-shadow: 0 0 15px var(--dourado);
+    box-shadow: 0 0 15px var(--marrom-couro);
 }
 
 .fundo-galeria {
@@ -147,71 +128,44 @@ h2 {
     background-size: 180px 180px;
 }
 
-#galeria img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}
-
-#galeria img:hover,
-#galeria img:focus {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(196, 158, 73, 0.8);
-    outline: none;
-}
-
 #contato {
-    background-image: url('img/castelo-noite.jpg');
+    background-image: url('img/castelo-noite.jpg'); /* pode mudar para campo ou estábulo */
     background-size: cover;
     background-position: center;
     padding: 4rem 0;
 }
 
 .formulario {
-    background-color: #3b1f4edd; /* roxo escuro com transparência */
+    background-color: #4B2E11dd; /* marrom madeira com transparência */
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 0 15px var(--dourado);
+    box-shadow: 0 0 15px var(--marrom-couro);
     font-weight: bold;
-    color: var(--cinza-claro);
+    color: var(--texto-claro);
 }
 
 .formulario label {
-    color: var(--dourado);
+    color: var(--marrom-couro);
 }
 
 .formulario button {
-    background-color: var(--dourado);
+    background-color: var(--marrom-couro);
     border: none;
     font-weight: bold;
-    color: var(--preto-fundo);
+    color: var(--bege-areia);
     transition: background-color 0.3s ease;
-    cursor: pointer;
 }
 
-.formulario button:hover,
-.formulario button:focus {
-    background-color: var(--roxo-claro);
-    color: var(--cinza-claro);
-    outline: none;
+.formulario button:hover, .formulario button:focus {
+    background-color: var(--verde-musgo);
+    color: var(--texto-claro);
 }
 
 .form-control {
-    background-color: #6b4c8a; /* roxo médio */
-    color: var(--cinza-claro);
+    background-color: #6b4c8a; /* se quiser mudar esse roxo, pode colocar um marrom mais claro */
+    color: var(--texto-claro);
     border: none;
     border-radius: 8px;
-    padding: 0.5rem 1rem;
-    transition: background-color 0.3s ease;
-}
-
-.form-control:focus {
-    background-color: #7e5ba8;
-    outline: none;
-    color: #fff;
 }
 
 .form-control::placeholder {
@@ -230,13 +184,12 @@ h2 {
 .rotacao-botao {
     transform: rotate(-90deg);
     transform-origin: right center;
-    transition: transform 0.3s ease;
 }
 
 /* padrão: opções escondidas */
 .opcoes-acessibilidade {
     margin-top: 10px;
-    display: none; /* inicialmente escondido */
+    display: none;
     flex-direction: column;
 }
 
@@ -247,33 +200,16 @@ h2 {
 
 .opcoes-acessibilidade button {
     margin-bottom: 5px;
-    cursor: pointer;
-    background-color: var(--dourado);
-    border: none;
-    color: var(--preto-fundo);
-    font-weight: 600;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
 }
 
-.opcoes-acessibilidade button:hover,
-.opcoes-acessibilidade button:focus {
-    background-color: var(--roxo-claro);
-    color: var(--cinza-claro);
-    outline: none;
-}
-
-/* ======== Adições para controlar tamanho e posicionamento das imagens ======== */
+/* ======== Imagens responsivas e ajustadas ======== */
 
 img {
     max-width: 100%;
     height: auto;
     display: block;
-    border-radius: 15px;
 }
 
-/* Ajuste específico da imagem na seção inicial */
 .img-inicio {
     position: absolute;
     right: 2rem;
@@ -281,25 +217,22 @@ img {
     max-width: 40rem;
     width: 100%;
     height: auto;
-    filter: drop-shadow(0 0 10px var(--roxo-escuro));
-    transition: filter 0.3s ease;
+    filter: drop-shadow(0 0 10px var(--verde-musgo));
 }
 
-/* Imagens da galeria */
 #galeria img {
     max-width: 100%;
     height: auto;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    transition: transform 0.3s ease;
 }
 
-/* Imagens em conteúdo */
 .esquerda-conteudo img, #historia img {
     max-width: 100%;
     max-height: 350px;
     width: auto;
     height: auto;
+    border-radius: 15px;
 }
 
 /* Responsividade: ajusta imagem inicial para telas pequenas */
@@ -313,12 +246,7 @@ img {
         top: auto;
         right: auto;
     }
-
-    #historia .container {
-        flex-direction: column;
-        gap: 1.5rem;
-    }
-
+}
     .esquerda-conteudo {
         max-width: 100%;
     }
